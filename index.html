@@ -1,0 +1,37 @@
+<html>
+<head>
+    <title>UFO</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="jquery-3.7.1.min.js"></script>
+    <script src="engine.js"></script>
+    <script src="data.js"></script>
+</head>
+<body>
+    <div class="tabs" style="display: none;">
+        <div class="active" data-target="start">forest clearing</div>
+        <div class="hidden" data-target="solar-panel hidden">solar panel</div>
+        <div class="hidden" data-target="battery">battery</div>
+        <div class="hidden" data-target="console">console</div>
+        <div class="hidden" data-target="fabricator">fabricator</div>
+        <div class="hidden" data-target="dishwasher">dishwasher</div>
+    </div>
+    <div class="log" style="display: none;"></div>
+    <div class="pane active" id="start">
+        <div class="status"></div>
+    </div>
+    <div class="pane" id="solar-panel">
+    </div>
+    <div class="pane" id="battery">
+    </div>
+    <div class="pane" id="console">
+    </div>
+    <div class="pane" id="fabricator">
+    </div>
+    <div class="pane" id="dishwasher">
+    </div>
+
+    <script>
+        engine.runEvent("start game")
+    </script>
+</body>
+</html>

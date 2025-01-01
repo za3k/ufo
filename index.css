@@ -1,0 +1,78 @@
+html, body { margin: 0; padding: 0; }
+
+body { margin: 10px; }
+
+body {
+    background: black;
+    color: pink;
+}
+
+.tabs {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+    border-bottom: 1px solid;
+    width: fit-content;
+    padding: 0 20px;
+}
+
+.tabs > * {
+    flex: 0 0;
+    flex-basis: fit-content;
+    padding: 3px 10px 3px;
+    border: 1px solid;
+    margin-bottom: -1px;
+    cursor: pointer;
+}
+.tabs > *:nth-child(n+2){
+    /*border-left: 0;*/ /* Jammed-together style */
+    margin-left: 10px;
+}
+
+.tabs > .active {
+    border-bottom-color: black;
+}
+.tabs > .hidden {
+    display: none;
+}
+
+.pane { display: none; }
+.pane.active { display: inherit; }
+
+.pane {
+}
+
+.log {
+    float: right;
+    /*border: 1px solid;*/
+    height: 80%;
+    padding: 10px;
+}
+.log > *:nth-child(1) {
+    opacity: 60%;
+}
+.log > *:nth-child(2) {
+    opacity: 40%;
+}
+.log > *:nth-child(3) {
+    opacity: 20%;
+}
+.log > *:nth-child(n+4) {
+    opacity: 5%;
+}
+
+.action {
+    border: 1px solid;
+    margin: 10px;
+    padding: 10px;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.action:hover {
+    background: rgba(255,0,0,0.2);
+}
+
+.action:active {
+    background: rgba(255,0,0,0.1);
+}
